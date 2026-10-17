@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edlyn Mathias — B.Tech Data Science student at MPSTME, NMIMS Mumbai. Projects, experience, certifications and more.">
+  <title>Edlyn Mathias - My personal portfolio</title>
+  
+  <!-- Typography Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Flat Green Plant Custom Cursor Follower -->
+  <div id="plant-cursor-tracker" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 26C16 19 14.5 13 8 11C8 18 11.5 24 16 26Z" fill="#22c55e" stroke="#15803d" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M16 26C16 17 19.5 8 26 7C26 15 22 23 16 26Z" fill="#4ade80" stroke="#16a34a" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M16 29V24" stroke="#166534" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="16" cy="27" r="1.5" fill="#15803d"/>
+    </svg>
+  </div>
+
+  <!-- Persistent Top Header Navigation Bar (ONLY the 7 required options) -->
+  <header class="navbar-header">
+    <nav class="container navbar-inner">
+      <ul class="nav-links">
+        <li class="nav-item"><a href="#about">about</a></li>
+        <li class="nav-item"><a href="#skills">skills</a></li>
+        <li class="nav-item"><a href="#projects">projects</a></li>
+        <li class="nav-item"><a href="#experience">experience</a></li>
+        <li class="nav-item"><a href="#certifications">certifications</a></li>
+        <li class="nav-item"><a href="#extracurriculars">extra curriculars</a></li>
+        <li class="nav-item"><a href="#contact">contact me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Fixed Sidebar Scroll Tracker -->
+  <aside class="sidebar-scroll-tracker" id="sidebar-scroll-tracker" aria-label="Page section navigation">
+    <div class="scroll-tracker-rail">
+      <div class="tracker-track-line"></div>
+      <div class="tracker-progress-line" id="tracker-progress-line"></div>
+      <div class="tracker-diamond-indicator" id="tracker-diamond-indicator" aria-hidden="true"></div>
+
+      <!-- 7 Section Nodes -->
+      <div class="tracker-nodes-container" id="tracker-nodes-container">
+        <button class="tracker-node" data-target="#about" aria-label="Navigate to About section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">about</span>
+        </button>
+        <button class="tracker-node" data-target="#skills" aria-label="Navigate to Skills section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">skills</span>
+        </button>
+        <button class="tracker-node" data-target="#projects" aria-label="Navigate to Projects section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">projects</span>
+        </button>
+        <button class="tracker-node" data-target="#experience" aria-label="Navigate to Experience section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">experience</span>
+        </button>
+        <button class="tracker-node" data-target="#certifications" aria-label="Navigate to Certifications section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">certifications</span>
+        </button>
+        <button class="tracker-node" data-target="#extracurriculars" aria-label="Navigate to Extra Curriculars section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">extra curriculars</span>
+        </button>
+        <button class="tracker-node" data-target="#contact" aria-label="Navigate to Contact section">
+          <span class="node-dot"></span>
+          <span class="tracker-tooltip">contact me</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO SECTION (Opening Huge Title with Staggered Mask Animation) -->
+    <section id="hero" class="section-block field-cocoa hero-block">
+      <div class="container">
+        
+        <div class="hero-title-reveal-wrap">
+          <h1 class="hero-main-title">
+            <span class="reveal-line">
+              <span class="reveal-word rw-1 hero-name-pink">Edlyn</span>
+              <span class="reveal-word rw-2 hero-name-pink">Mathias</span>
+            </span>
+            <span class="reveal-line hero-sub-pink">
+              <span class="reveal-word rw-dash hero-dash">-</span>
+              <span class="reveal-word rw-3">My</span>
+              <span class="reveal-word rw-4">personal</span>
+              <span class="reveal-word rw-5">portfolio</span>
+            </span>
+          </h1>
+        </div>
+
+        <p class="hero-deck">
+          Aspiring B.Tech Data Science student at MPSTME, NMIMS Mumbai with foundations in Python, data analysis, statistical analysis, Power BI, Tableau and visual storytelling. Experienced in technical &amp; research projects, Hackathons, currently writing a research paper on optimizing eDNA sampling methods.
+        </p>
+
+        <a href="#about" class="hero-scroll-cue" aria-label="Scroll to About section">
+          <span class="scroll-cue-label">scroll</span>
+          <span class="scroll-cue-line"></span>
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION: ABOUT ME (Color Field Flip: Petal Wash) -->
+    <section id="about" class="section-block field-petal">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">ABOUT ME</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card with Photo -->
+          <div class="profile-card-container">
+            <div class="profile-photo-wrapper">
+              <img id="profile-display-img" src="assets/edlyn-profile.jpg" alt="Portrait photo of Edlyn Mathias" class="profile-photo-img">
+            </div>
+
+            <!-- Profile Details -->
+            <ul class="profile-details-list">
+              <li class="profile-detail-row">
+                <span class="profile-detail-key">Degree</span>
+                <span class="profile-detail-val">B.Tech Data Science</span>
+              </li>
+              <li class="profile-detail-row">
+                <span class="profile-detail-key">CGPA</span>
+                <span class="profile-detail-val">8.41</span>
+              </li>
+              <li class="profile-detail-row">
+                <span class="profile-detail-key">Institution</span>
+                <span class="profile-detail-val">MPSTME, NMIMS Mumbai</span>
+              </li>
+              <li class="profile-detail-row">
+                <span class="profile-detail-key">Core Stack</span>
+                <span class="profile-detail-val">Python, PowerBI, Tableau, ML, SQL</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- About Me Content Column -->
+          <div class="about-content-column">
+            <div class="about-bio-card">
+              <p class="about-bio-p">
+                Hi! I’m Edlyn, and I’m a B.Tech Data Science student at MPSTME. Ever since I was little, I have had a strong interest in mathematics and statistics, and I have always looked for ways to integrate them with biology, something I am incredibly passionate about.
+              </p>
+              <p class="about-bio-p">
+                I like to think of myself as someone who notices patterns everywhere: in the environment, in people, architecture, design, and music. This skill has proven to be super beneficial in my field, as data analysis is ultimately all about noticing patterns.
+              </p>
+              <p class="about-bio-p">
+                Aside from my analytical side, I am also a creative person and a free thinker. My creative imagination allows me to generate innovative ideas, whether I am developing a new solution to a technical problem or coming up with design ideas that stand out from the crowd.
+              </p>
+              <p class="about-bio-p">
+                I also love socializing, interacting with my peers, and meeting new people to get to know new perspectives. I am not afraid to face a crowd, and I won't stop asking questions until I have absolute clarity. I am deeply dedicated to my work, I believe that every opportunity is a learning experience, I look forward to seizing every opportunity that comes my way.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: SKILLS (Color Field Flip: Plum Velvet) -->
+    <section id="skills" class="section-block field-plum">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">TECHNICAL SKILLS</h2>
+        </div>
+
+        <!-- Categories Grid -->
+        <div class="skills-categories-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card" data-category="languages">
+            <div class="category-header">
+              <h3 class="category-name">Programming Languages</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">HTML</span>
+              <span class="skill-pill">CSS</span>
+            </div>
+          </div>
+
+          <!-- Libraries & Frameworks -->
+          <div class="skill-category-card" data-category="frameworks">
+            <div class="category-header">
+              <h3 class="category-name">Libraries &amp; Frameworks</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">Matplotlib</span>
+              <span class="skill-pill">TensorFlow</span>
+              <span class="skill-pill">Scikit-learn</span>
+              <span class="skill-pill">Seaborn</span>
+              <span class="skill-pill">Streamlit</span>
+            </div>
+          </div>
+
+          <!-- Tools & Software -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="category-header">
+              <h3 class="category-name">Tools &amp; Software</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">Tableau</span>
+              <span class="skill-pill">Power BI</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">Excel</span>
+              <span class="skill-pill">VS Code</span>
+              <span class="skill-pill">Jupyter Notebooks</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">Android Studio</span>
+              <span class="skill-pill">Render</span>
+              <span class="skill-pill">AWS</span>
+              <span class="skill-pill">RAG</span>
+              <span class="skill-pill">AI</span>
+            </div>
+          </div>
+
+          <!-- Design Software -->
+          <div class="skill-category-card accent-card" data-category="design">
+            <div class="category-header">
+              <h3 class="category-name">Design Software</h3>
+            </div>
+            <div class="skill-tags-flex">
+              <span class="skill-pill">Adobe Photoshop</span>
+              <span class="skill-pill">Adobe Illustrator</span>
+              <span class="skill-pill">AutoCAD</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: PROJECTS (Color Field Flip: Cocoa Husk) -->
+    <section id="projects" class="section-block field-cocoa">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">PROJECTS</h2>
+        </div>
+
+        <!-- Project Filter Controls -->
+        <div class="projects-controls">
+          <div class="projects-filter-group">
+            <button class="filter-chip active" data-filter="all">All Projects</button>
+            <button class="filter-chip" data-filter="ongoing">Ongoing</button>
+            <button class="filter-chip" data-filter="ml">Machine Learning &amp; AI</button>
+            <button class="filter-chip" data-filter="apps">Apps &amp; Dashboards</button>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: eDNA Sampling Framework (ongoing) -->
+          <div class="project-card featured" data-status="ongoing" data-domain="research,ml">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-ongoing">
+                  <span class="pulse-dot"></span>
+                  <span>Ongoing</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Data-driven Framework for optimizing eDNA sampling across spatial, depth, and temporal dimensions: A Belgian North Sea Case Study
+              </h3>
+              <p class="project-desc">
+                Currently working on research paper on optimizing eDNA sampling strategies. Reviewed 30+ papers, identified research gaps and scope of study, developed the basic research methodology, cleaned and transformed dataset. Currently developing two ML models.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Research Paper</span>
+                <span class="prj-tag">eDNA Genomics</span>
+                <span class="prj-tag">Machine Learning</span>
+                <span class="prj-tag">Belgian North Sea</span>
+                <span class="prj-tag">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Integrated Environmental Monitoring (ongoing) -->
+          <div class="project-card featured" data-status="ongoing" data-domain="research,ml">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-ongoing">
+                  <span class="pulse-dot"></span>
+                  <span>Ongoing</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Integrated Environmental Monitoring and Predictive System for Ecosystem and Urban Sustainability
+              </h3>
+              <p class="project-desc">
+                Currently working on a team project under the mentorship of Dr. Siba Panda. Created prototype1 of a scalable network of IoT-enabled sensors. Collected data and analysed through machine learning and CNN models. Currently working on incorporating GPS enabled alarm in fire stations.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Dr. Siba Panda Mentorship</span>
+                <span class="prj-tag">IoT Sensors</span>
+                <span class="prj-tag">CNN Models</span>
+                <span class="prj-tag">Machine Learning</span>
+                <span class="prj-tag">Urban Sustainability</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: AI vs Real image detection (Has GitHub Link) -->
+          <div class="project-card" data-status="completed" data-domain="ml">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Deployed on Streamlit</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                AI vs Real image detection
+              </h3>
+              <p class="project-desc">
+                Created a project that can detect AI vs Real images using ML; also calculated the precision test and hypotheses testing on the model, along with its accuracy score, and deployed on Streamlit.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Machine Learning</span>
+                <span class="prj-tag">Precision Test</span>
+                <span class="prj-tag">Hypothesis Testing</span>
+                <span class="prj-tag">Streamlit Deployed</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/edlynmathias/AI_detector_SSDI_Project" class="btn-github" target="_blank" rel="noopener noreferrer">
+                  <span>GitHub Repository</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Cat disease detector -->
+          <div class="project-card" data-status="completed" data-domain="ml,apps">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Deployed Website</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Cat disease detector
+              </h3>
+              <p class="project-desc">
+                Created a project that detects type of cat injury/disease based on skin, eye, paw, claw images. Used a CNN model. A fully deployed website.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Machine Learning</span>
+                <span class="prj-tag">CNN Model</span>
+                <span class="prj-tag">Computer Vision</span>
+                <span class="prj-tag">Deployed Website</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Spotify Wrapped Analysis dashboard -->
+          <div class="project-card" data-status="completed" data-domain="apps">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Interactive Dashboard</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Spotify Wrapped Analysis dashboard (Power BI)
+              </h3>
+              <p class="project-desc">
+                Created an Interactive Dashboard on Power BI. Showing analysis of music data. Includes hourly analysis, top songs, top artists, monthly analysis, tracks played most, tracks played at night and many more analysis.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Power BI</span>
+                <span class="prj-tag">DAX</span>
+                <span class="prj-tag">Music Data Analysis</span>
+                <span class="prj-tag">Visual Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Bill split App -->
+          <div class="project-card" data-status="completed" data-domain="apps">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Completed</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Bill split App
+              </h3>
+              <p class="project-desc">
+                Built a bill split app on android studio, also incorporated database from DB Browser to track status of money owed by each person.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Android Studio</span>
+                <span class="prj-tag">DB Browser</span>
+                <span class="prj-tag">SQLite Database</span>
+                <span class="prj-tag">Mobile App</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7: Dhruveeya Platform -->
+          <div class="project-card" data-status="completed" data-domain="apps,research">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Prototype V1</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Dhruveeya Platform - Smart India Hackathon
+              </h3>
+              <p class="project-desc">
+                Ideated on a digital Platform for efficient remote management of Indian Antarctic Research Stations. Involved extensive research on Antarctic headquarter and base management, inventory requirements, Feasibility and viability, Potential impact etc. Developed first prototype.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">Smart India Hackathon</span>
+                <span class="prj-tag">Antarctic Stations</span>
+                <span class="prj-tag">Remote Management</span>
+                <span class="prj-tag">Digital Platform</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8: Fool The LLM'26 -->
+          <div class="project-card" data-status="completed" data-domain="ml,research">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Hackathon Winner</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Fool The LLM'26
+              </h3>
+              <p class="project-desc">
+                Participated in AI Jailbreaking hackathon. Won 3 levels of Jailbreaking using prompt injection, Edge cases and Encryption techniques.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">AI Jailbreaking</span>
+                <span class="prj-tag">Prompt Injection</span>
+                <span class="prj-tag">Edge Cases</span>
+                <span class="prj-tag">Encryption Techniques</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 9: Dice Wars Game (Has GitHub Link) -->
+          <div class="project-card" data-status="completed" data-domain="apps,research">
+            <div>
+              <div class="card-top-meta">
+                <span class="project-status-btn status-completed">
+                  <span>Agent Systems</span>
+                </span>
+              </div>
+              <h3 class="project-title">
+                Dice Wars Game (Agent analysis and Game making)
+              </h3>
+              <p class="project-desc">
+                A browser-based Dice Wars game developed for an AI and Agent Systems course. The game uses multiple AI agents to handle decision-making and gameplay behaviour.
+              </p>
+            </div>
+            <div>
+              <div class="project-tag-list">
+                <span class="prj-tag">AI Agents</span>
+                <span class="prj-tag">Agent Systems</span>
+                <span class="prj-tag">Decision Modeling</span>
+                <span class="prj-tag">Browser Game</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/edlynmathias/Dice-wars-analysis" class="btn-github" target="_blank" rel="noopener noreferrer">
+                  <span>GitHub Repository</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: EXPERIENCE (Color Field Flip: Bubblegum Blush) -->
+    <section id="experience" class="section-block field-bubblegum">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">EXPERIENCE</h2>
+        </div>
+
+        <div class="experience-timeline">
+          <!-- Role 1: CSB Bank -->
+          <div class="experience-card">
+            <div class="experience-top-bar">
+              <div>
+                <h3 class="exp-role-title">Intern | CSB Bank</h3>
+              </div>
+              <span class="exp-date-pill">June 2026</span>
+            </div>
+            <p class="exp-body-text">
+              Built NRI product budget sheets on Excel, performed analysis and visualizations on NRI product data using PowerBI. Wrote reports on growth strategies etc., backed by thorough research.
+            </p>
+            <div class="exp-tag-list">
+              <span class="prj-tag">Power BI</span>
+              <span class="prj-tag">Excel Budget Sheets</span>
+              <span class="prj-tag">NRI Product Analysis</span>
+              <span class="prj-tag">Growth Strategies</span>
+            </div>
+          </div>
+
+          <!-- Role 2: ThinkAnalytics360 -->
+          <div class="experience-card">
+            <div class="experience-top-bar">
+              <div>
+                <h3 class="exp-role-title">Summer Intern | ThinkAnalytics360</h3>
+              </div>
+              <span class="exp-date-pill">June 2025</span>
+            </div>
+            <p class="exp-body-text">
+              Participated in discussions, giving practical exposure to pharma industry insights. Worked on Excel and performed data extraction using Gen AI.
+            </p>
+            <div class="exp-tag-list">
+              <span class="prj-tag">Gen AI</span>
+              <span class="prj-tag">Data Extraction</span>
+              <span class="prj-tag">Pharma Industry Insights</span>
+              <span class="prj-tag">Excel</span>
+            </div>
+          </div>
+
+          <!-- Role 3: MUNSociety MPSTME (With Deliverables Showcase Gallery) -->
+          <div class="experience-card">
+            <div class="experience-top-bar">
+              <div>
+                <h3 class="exp-role-title">Head of Content &amp; Design | MUNSociety MPSTME</h3>
+              </div>
+              <span class="exp-date-pill">Core Leadership</span>
+            </div>
+            <p class="exp-body-text">
+              As a C&amp;D Core designed posts &amp; 50 + deliverables for events like MumbaiMUN and IntraMUN using Adobe Illustrator, Photoshop and other design software. Creating, reviewing, refining, and managing written &amp; digital content.
+            </p>
+            <div class="exp-tag-list">
+              <span class="prj-tag">Adobe Illustrator</span>
+              <span class="prj-tag">Adobe Photoshop</span>
+              <span class="prj-tag">50+ Deliverables</span>
+              <span class="prj-tag">Digital Content</span>
+            </div>
+
+            <!-- Content & Design Visual Showcase Gallery -->
+            <div class="design-gallery-container">
+              <div class="design-gallery-header">
+                <span class="design-gallery-title">Design Deliverables</span>
+                <div class="design-gallery-tabs">
+                  <button class="gallery-tab-btn active" data-target="mumbai-mun">MumbaiMUN (4)</button>
+                  <button class="gallery-tab-btn" data-target="intra-mun">IntraMUN (3)</button>
+                </div>
+              </div>
+
+              <!-- Main Viewport (Constrained height, neat fit) -->
+              <div class="gallery-visual-viewport" id="mun-gallery-viewport" title="Click to view deliverable in full lightbox">
+                <img id="mun-gallery-display-img" src="assets/mumbai-mun-1.jpg" alt="MumbaiMUN Deliverables" class="gallery-visual-img">
+              </div>
+
+              <!-- Thumbnails Navigation Strip -->
+              <div class="gallery-thumbnails-strip" id="mun-thumbnails-strip">
+                <!-- Dynamically rendered in JS -->
+              </div>
+
+              <div class="gallery-caption-strip">
+                <span id="mun-gallery-subtitle">Adobe Illustrator &amp; Photoshop // 50+ Visual Deliverables</span>
+                <span class="gallery-hint">Click image to enlarge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: CERTIFICATIONS (Color Field Flip: Plum Velvet) -->
+    <section id="certifications" class="section-block field-plum">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">CERTIFICATIONS</h2>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Cert 1: RAG Systems (Has Certificate) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge">Coursera</span>
+              <h3 class="cert-title">RAG Systems &amp; Agentic Workflows with Pinecone and LangGraph</h3>
+            </div>
+            <button class="btn-view-cert" data-cert="rag-langgraph">
+              <span>View Certificate</span>
+              <span>↗</span>
+            </button>
+          </div>
+
+          <!-- Cert 2: AWS Certified AI Practitioner (No button) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#552800; color:#ff9900;">Udemy</span>
+              <h3 class="cert-title">Ultimate AWS Certified AI Practitioner AIF-C01</h3>
+            </div>
+          </div>
+
+          <!-- Cert 3: Fundamentals of TinyML (No button) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#400b14; color:#ff77c9;">HarvardX</span>
+              <h3 class="cert-title">Fundamentals of TinyML</h3>
+            </div>
+          </div>
+
+          <!-- Cert 4: Python (Has Certificate) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#073b1d; color:#4ade80;">DataCamp</span>
+              <h3 class="cert-title">Python</h3>
+            </div>
+            <button class="btn-view-cert" data-cert="python">
+              <span>View Certificate</span>
+              <span>↗</span>
+            </button>
+          </div>
+
+          <!-- Cert 5: Tableau (No button) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#4a2305; color:#f97316;">DataCamp</span>
+              <h3 class="cert-title">Tableau</h3>
+            </div>
+          </div>
+
+          <!-- Cert 6: Power BI (No button) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#4a3f05; color:#facc15;">DataCamp</span>
+              <h3 class="cert-title">Power BI</h3>
+            </div>
+          </div>
+
+          <!-- Cert 7: Intermediate SQL (Has Certificate) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#073b1d; color:#4ade80;">DataCamp</span>
+              <h3 class="cert-title">Intermediate SQL</h3>
+            </div>
+            <button class="btn-view-cert" data-cert="sql">
+              <span>View Certificate</span>
+              <span>↗</span>
+            </button>
+          </div>
+
+          <!-- Cert 8: Introduction to Java (Has Certificate) -->
+          <div class="cert-card">
+            <div>
+              <span class="cert-issuer-badge" style="background:#1b2d3c; color:#93c5fd;">DataCamp</span>
+              <h3 class="cert-title">Introduction to Java</h3>
+            </div>
+            <button class="btn-view-cert" data-cert="java">
+              <span>View Certificate</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: EXTRA CURRICULARS (Color Field Flip: Petal Wash) -->
+    <section id="extracurriculars" class="section-block field-petal">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">EXTRA CURRICULARS</h2>
+        </div>
+
+        <div class="extra-activities-list">
+          <!-- Activity 1: LaxmiDevi Pratishtha -->
+          <div class="extra-activity-card">
+            <div class="extra-top-bar">
+              <div>
+                <h3 class="extra-title">LaxmiDevi Pratishtha</h3>
+              </div>
+              <span class="extra-tag">Volunteering</span>
+            </div>
+            <p class="extra-desc">
+              Volunteered at an NGO, assisting terracotta product painting, Beach cleaning, forest plantation, while promoting compassion and community values.
+            </p>
+            <div class="extra-images-grid">
+              <div class="extra-img-frame" title="Click to view in lightbox">
+                <div class="img-container">
+                  <img src="assets/ngo-terracotta.jpg" loading="lazy" alt="Terracotta product painting">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Terracotta pot painting</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+              <div class="extra-img-frame" title="Click to view in lightbox">
+                <div class="img-container">
+                  <img src="assets/ngo-beachclean.jpg" loading="lazy" alt="Beach cleaning and community drive">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Beach cleanup</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity 2: Aerial Acrobatics -->
+          <div class="extra-activity-card">
+            <div class="extra-top-bar">
+              <div>
+                <h3 class="extra-title">Aerial Acrobatics</h3>
+              </div>
+              <span class="extra-tag">Aerial Arts</span>
+            </div>
+            <p class="extra-desc">
+              Trained in aerial arts, specializing in Silks and Hoop, participated in performances and regular practice demonstrating strength, flexibility, and discipline.
+            </p>
+            <div class="extra-images-grid">
+              <div class="extra-img-frame" title="Click to view in lightbox">
+                <div class="img-container">
+                  <img src="assets/aerial-silks.jpg" loading="lazy" alt="Aerial silks performance">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Aerial Silks</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+              <div class="extra-img-frame" title="Click to view in lightbox">
+                <div class="img-container">
+                  <img src="assets/aerial-hoop.jpg" loading="lazy" alt="Aerial hoop lyra routine">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Aerial Hoop</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity 3: Trinity College London Grade 8 Electronic Keyboard (With Performance Photo + Distinction Certificate) -->
+          <div class="extra-activity-card">
+            <div class="extra-top-bar">
+              <div>
+                <h3 class="extra-title">Trinity College London – Grade 8 Electronic Keyboard</h3>
+              </div>
+              <span class="extra-tag">Distinction</span>
+            </div>
+            <p class="extra-desc">
+              Completed Grade 8 certification with distinction grade, showcasing advanced proficiency in musical performance, technical skills, and interpretation.
+            </p>
+            <div class="extra-images-grid">
+              <div class="extra-img-frame" title="Click to view electronic keyboard performance photo in lightbox">
+                <div class="img-container">
+                  <img src="assets/keyboard-performance.jpg" loading="lazy" alt="Edlyn Mathias performing electronic keyboard">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Electronic Keyboard Performance</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+              <div class="extra-img-frame contain-fit" title="Click to view distinction certificate in lightbox">
+                <div class="img-container">
+                  <img src="assets/trinity-distinction.png" loading="lazy" alt="Trinity College London Grade 8 Electronic Keyboard Certificate of Distinction">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Grade 8 Distinction Certificate</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity 4: Model for Cirkus recycled jeans brand -->
+          <div class="extra-activity-card">
+            <div class="extra-top-bar">
+              <div>
+                <h3 class="extra-title">Model for Cirkus recycled jeans brand</h3>
+              </div>
+              <span class="extra-tag">Sustainable Fashion</span>
+            </div>
+            <p class="extra-desc">
+              Model for Cirkus recycled jeans brand promoting sustainable textiles, circular fashion, and upcycled denim.
+            </p>
+            <div class="extra-images-grid">
+              <div class="extra-img-frame" title="Click to view in lightbox">
+                <div class="img-container">
+                  <img src="assets/cirkus-editorial-cover.jpg" loading="lazy" alt="Cirkus Style Magazine Cover">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Cirkus Editorial Cover</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+              <div class="extra-img-frame" title="Click to view in lightbox">
+                <div class="img-container">
+                  <img src="assets/cirkus-group-shoot.jpg" loading="lazy" alt="Sustainable denim group editorial">
+                </div>
+                <div class="extra-img-caption">
+                  <span class="caption-text">Cirkus Denim Campaign</span>
+                  <span class="zoom-hint">Enlarge</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: CONTACT ME (Color Field Flip: Cocoa Husk) -->
+    <section id="contact" class="section-block field-cocoa">
+      <div class="container">
+        <div class="section-header-wrap">
+          <h2 class="section-heading">CONTACT ME</h2>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left Direct Contact Buttons -->
+          <div class="contact-info-panel">
+            <p class="contact-pitch">
+              Open to discussions regarding data science research, biological and healthcare informatics, and technical collaborations.
+            </p>
+
+            <div class="contact-buttons-stack">
+              <!-- Email Button -->
+              <button id="btn-copy-email" class="btn-contact-action" title="Copy email address and open mail">
+                <div class="contact-icon-label">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-neon-orchid);"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <div>
+                    <div>Email</div>
+                    <div style="font-size:11px; opacity:0.8; font-weight:400;">edlynmath@gmail.com</div>
+                  </div>
+                </div>
+                <span class="arrow-right">↗</span>
+              </button>
+
+              <!-- GitHub Button -->
+              <a href="https://github.com/edlynmathias" class="btn-contact-action" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon-label">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-neon-orchid);"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  <div>
+                    <div>GitHub</div>
+                    <div style="font-size:11px; opacity:0.8; font-weight:400;">github.com/edlynmathias</div>
+                  </div>
+                </div>
+                <span class="arrow-right">↗</span>
+              </a>
+
+              <!-- LinkedIn Button -->
+              <a href="https://www.linkedin.com/in/edlyn-mathias-b39618319/" class="btn-contact-action" target="_blank" rel="noopener noreferrer">
+                <div class="contact-icon-label">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-neon-orchid);"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                  <div>
+                    <div>LinkedIn</div>
+                    <div style="font-size:11px; opacity:0.8; font-weight:400;">linkedin.com/in/edlyn-mathias-b39618319</div>
+                  </div>
+                </div>
+                <span class="arrow-right">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Minimalist Contact Form -->
+          <div class="contact-form-panel">
+            <form id="portfolio-contact-form">
+              <div class="form-field-group">
+                <label for="input-name" class="form-label">Name</label>
+                <input type="text" id="input-name" class="form-input" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-field-group">
+                <label for="input-email" class="form-label">Email</label>
+                <input type="email" id="input-email" class="form-input" placeholder="name@domain.com" required>
+              </div>
+
+              <div class="form-field-group">
+                <label for="input-message" class="form-label">Message</label>
+                <textarea id="input-message" class="form-textarea" placeholder="Your message..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit-transmission">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Persistent Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-meta">
+        Edlyn Mathias | Personal Portfolio 2026
+      </div>
+
+      <div>
+        <button id="btn-back-to-top" class="btn-back-to-top">
+          <span>Top ↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: Certificate Image Viewer (View Only) -->
+  <div id="certificate-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+    <div class="modal-content-box">
+      <div class="modal-top-bar">
+        <div class="modal-title" id="cert-modal-title">Verified Certificate</div>
+        <button class="modal-close-btn modal-close-trigger">Close ✕</button>
+      </div>
+      <div class="modal-body">
+        <img id="cert-modal-img" src="" alt="Verified Course Certificate" class="modal-image-preview">
+      </div>
+      <div class="modal-actions-bar">
+        <div>
+          <div id="cert-modal-issuer" class="mono-micro" style="color:var(--color-petal-wash)">Issuer</div>
+          <div id="cert-modal-credid" class="mono-micro" style="color:var(--color-neon-orchid); margin-top:4px;">Credential Verified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Lightbox -->
+  <div id="lightbox-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content-box" style="max-width:960px;">
+      <div class="modal-top-bar">
+        <div class="modal-title" id="lightbox-title">Image Viewer</div>
+        <button class="modal-close-btn modal-close-trigger">Close ✕</button>
+      </div>
+      <div class="modal-body" style="padding:10px; text-align:center;">
+        <img id="lightbox-img" src="" alt="Expanded preview" class="modal-image-preview">
+      </div>
+      <div class="modal-actions-bar">
+        <div id="lightbox-caption" class="mono-micro" style="color:var(--color-petal-wash)">Caption</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Feedback Toast -->
+  <div id="action-toast" role="status" aria-live="polite"></div>
+
+  <!-- JavaScript Engine -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Flat Green Plant Sprout Cursor -->
+  <path d="M16 26C16 19 14.5 13 8 11C8 18 11.5 24 16 26Z" fill="#22c55e" stroke="#15803d" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M16 26C16 17 19.5 8 26 7C26 15 22 23 16 26Z" fill="#4ade80" stroke="#16a34a" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M16 29V24" stroke="#166534" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="16" cy="27" r="1.5" fill="#15803d"/>
+  <!-- Pointer hotspot indicator tiny diamond -->
+  <polygon points="4,2 8,2 6,0" fill="#22c55e"/>
+</svg>
