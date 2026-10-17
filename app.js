@@ -4,7 +4,7 @@
  * 1. Flat green plant cursor physics & blooming interaction
  * 2. Navigation smooth scroll & active scrollspy
  * 3. Skill pill copy interaction
- * 4. Experience Content & Design image viewer & thumbnail strip
+ * 4. Experience Content & Design deliverables grid
  * 5. Projects filter
  * 6. Course Certification modal previewer (view only)
  * 7. Extracurricular activity image lightbox
@@ -66,7 +66,7 @@ function initPlantCursor() {
   }
 
   // Hover reactive bloom on interactive elements
-  const interactives = 'a, button, input, textarea, select, .project-card, .cert-card, .extra-img-frame, .skill-pill, .gallery-visual-viewport, .gallery-thumb-btn';
+  const interactives = 'a, button, input, textarea, select, .project-card, .cert-card, .extra-img-frame, .skill-pill, .deliverable-tile';
   document.addEventListener('mouseover', (e) => {
     tracker.classList.toggle('hovering', !!e.target.closest(interactives));
   });
@@ -164,10 +164,7 @@ function initSkillsFilter() {
    -------------------------------------------------------------------------- */
 function initDesignGallery() {
   const tabBtns = document.querySelectorAll('.gallery-tab-btn');
-  const galleryImg = document.getElementById('mun-gallery-display-img');
-  const gallerySubtitle = document.getElementById('mun-gallery-subtitle');
-  const galleryViewport = document.getElementById('mun-gallery-viewport');
-  const thumbnailsStrip = document.getElementById('mun-thumbnails-strip');
+  const grid = document.getElementById('mun-deliverables-grid');
 
   const galleryData = {
     'mumbai-mun': {
@@ -189,70 +186,35 @@ function initDesignGallery() {
     }
   };
 
-  let currentCategory = 'mumbai-mun';
-  let currentIndex = 0;
+  function renderGallery(category) {
+    const data = galleryData[category];
+    if (!data || !grid) return;
 
-  function showImage(item) {
-    if (!galleryImg || !galleryViewport) return;
-    galleryViewport.style.setProperty('--backdrop', `url("${item.src}")`);
-    if (galleryImg.getAttribute('src') === item.src) return;
-
-    // Cross-fade between deliverables
-    galleryImg.classList.add('is-swapping');
-    setTimeout(() => {
-      galleryImg.onload = () => galleryImg.classList.remove('is-swapping');
-      galleryImg.src = item.src;
-      galleryImg.alt = item.caption;
-    }, 180);
-  }
-
-  function renderGallery() {
-    const data = galleryData[currentCategory];
-    if (!data) return;
-
-    const currentImg = data.images[currentIndex] || data.images[0];
-    showImage(currentImg);
-    if (gallerySubtitle) {
-      gallerySubtitle.textContent = `${currentImg.caption} [${currentIndex + 1}/${data.images.length}]`;
-    }
-
-    // Render thumbnails
-    if (thumbnailsStrip) {
-      thumbnailsStrip.innerHTML = '';
-      data.images.forEach((item, idx) => {
-        const thumbBtn = document.createElement('button');
-        thumbBtn.className = `gallery-thumb-btn ${idx === currentIndex ? 'active' : ''}`;
-        thumbBtn.title = item.caption;
-        thumbBtn.innerHTML = `<img src="${item.src}" alt="${item.caption}" loading="lazy">`;
-        thumbBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          currentIndex = idx;
-          renderGallery();
-        });
-        thumbnailsStrip.appendChild(thumbBtn);
-      });
-    }
+    grid.innerHTML = '';
+    data.images.forEach((item, idx) => {
+      const tile = document.createElement('button');
+      tile.type = 'button';
+      tile.className = 'deliverable-tile';
+      tile.title = item.caption;
+      tile.style.setProperty('--backdrop', `url("${item.src}")`);
+      tile.style.animationDelay = `${idx * 70}ms`;
+      tile.innerHTML = `
+        <span class="deliverable-img-box"><img src="${item.src}" alt="${item.caption}" loading="lazy"></span>
+        <span class="deliverable-caption">${item.caption}</span>`;
+      tile.addEventListener('click', () => openLightbox(item.src, data.title, item.caption));
+      grid.appendChild(tile);
+    });
   }
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       tabBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      currentCategory = btn.dataset.target;
-      currentIndex = 0;
-      renderGallery();
+      renderGallery(btn.dataset.target);
     });
   });
 
-  if (galleryViewport) {
-    galleryViewport.addEventListener('click', () => {
-      const data = galleryData[currentCategory];
-      const item = data.images[currentIndex] || data.images[0];
-      openLightbox(item.src, data.title, item.caption);
-    });
-  }
-
-  renderGallery();
+  renderGallery('mumbai-mun');
 }
 
 /* --------------------------------------------------------------------------

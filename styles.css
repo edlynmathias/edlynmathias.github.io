@@ -442,43 +442,10 @@ body {
 }
 
 .section-block {
-  padding: calc(var(--section-gap) + 40px) 0 var(--section-gap);
+  padding: var(--section-gap) 0;
   position: relative;
   width: 100%;
 }
-
-/* Smooth colour hand-off: each section fades in from the previous section's
-   colour instead of meeting it at a hard edge. */
-.section-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
-  background: linear-gradient(
-    to bottom,
-    var(--prev-bg, transparent) 0%,
-    color-mix(in srgb, var(--prev-bg, transparent) 55%, transparent) 35%,
-    color-mix(in srgb, var(--prev-bg, transparent) 18%, transparent) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-.section-block > .container {
-  position: relative;
-  z-index: 1;
-}
-
-#about            { --prev-bg: var(--color-cocoa-husk); }
-#skills           { --prev-bg: var(--color-petal-wash); }
-#projects         { --prev-bg: var(--color-plum-velvet); }
-#experience       { --prev-bg: var(--color-cocoa-husk); }
-#certifications   { --prev-bg: var(--color-bubblegum-blush); }
-#extracurriculars { --prev-bg: var(--color-plum-velvet); }
-#contact          { --prev-bg: var(--color-petal-wash); }
 
 .section-header-wrap {
   text-align: center;
@@ -979,88 +946,77 @@ body {
   border-color: var(--color-neon-orchid);
 }
 
-.gallery-visual-viewport {
-  position: relative;
-  width: 100%;
-  height: clamp(280px, 34vw, 380px);
-  border-radius: 6px;
-  overflow: hidden;
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.deliverable-tile {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   background-color: var(--color-plum-velvet);
   border: 1px solid var(--color-walnut-vein);
-  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+  color: var(--color-petal-wash);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  animation: filterIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.deliverable-tile:hover {
+  border-color: var(--color-neon-orchid);
+  transform: translateY(-2px);
+}
+
+/* Whole design shown over a blurred copy of itself, same as the activity photos */
+.deliverable-img-box {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 230px;
+  overflow: hidden;
   isolation: isolate;
 }
 
-.gallery-visual-viewport::before {
+.deliverable-img-box::before {
   content: '';
   position: absolute;
-  inset: -30px;
+  inset: -24px;
   background-image: var(--backdrop, none);
   background-size: cover;
   background-position: center;
-  filter: blur(26px) saturate(1.2) brightness(0.55);
+  filter: blur(22px) saturate(1.2) brightness(0.55);
   z-index: -1;
-  transition: background-image 0.4s ease;
 }
 
-.gallery-visual-img {
+.deliverable-img-box img {
   max-width: 100%;
   max-height: 100%;
-  width: auto;
-  height: 100%;
-  padding: 12px;
   object-fit: contain;
+  padding: 8px;
   display: block;
-  transition: transform 0.35s ease, opacity 0.18s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.gallery-visual-img.is-swapping {
-  opacity: 0;
+.deliverable-tile:hover .deliverable-img-box img {
+  transform: scale(1.04);
+}
+
+.deliverable-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 9px 12px;
+  background-color: var(--color-cocoa-husk);
+  border-top: 1px solid var(--color-walnut-vein);
 }
 
 .gallery-hint {
   color: var(--color-neon-orchid);
-}
-
-.gallery-visual-viewport:hover .gallery-visual-img {
-  transform: scale(1.02);
-}
-
-.gallery-thumbnails-strip {
-  display: flex;
-  gap: 10px;
-  margin-top: 14px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-}
-
-.gallery-thumb-btn {
-  width: 72px;
-  height: 52px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  border: 2px solid var(--color-walnut-vein);
-  background: var(--color-plum-velvet);
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.15s ease;
-}
-
-.gallery-thumb-btn img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery-thumb-btn:hover,
-.gallery-thumb-btn.active {
-  border-color: var(--color-neon-orchid);
-  transform: translateY(-2px);
 }
 
 .gallery-caption-strip {
