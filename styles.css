@@ -720,11 +720,22 @@ body {
 
 .projects-grid .project-card .btn-more {
   margin-top: auto;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .projects-grid .expandable-inner .card-top-meta {
   margin: 8px 0 12px 0;
+  justify-content: center;
+}
+
+/* Centred card content */
+.projects-grid .project-card {
+  text-align: center;
+}
+
+.projects-grid .project-tag-list,
+.projects-grid .project-card-footer {
+  justify-content: center;
 }
 
 /* --- Read more toggle --- */
