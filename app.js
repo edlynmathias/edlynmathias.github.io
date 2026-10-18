@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsFilter();
   initDesignGallery();
   initProjectsFilter();
+  initReadMore();
   initCertificateModal();
   initExtracurricularLightbox();
   initContactActions();
@@ -245,6 +246,24 @@ function initProjectsFilter() {
           shown++;
         }
       });
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   5b. READ MORE TOGGLES (project cards show only the title until opened)
+   -------------------------------------------------------------------------- */
+function initReadMore() {
+  document.querySelectorAll('.btn-more').forEach(btn => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    const label = btn.querySelector('.btn-more-label');
+    if (!panel) return;
+
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      panel.classList.toggle('open', open);
+      if (label) label.textContent = open ? btn.dataset.less : btn.dataset.more;
     });
   });
 }

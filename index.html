@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
@@ -272,75 +272,80 @@
           
           <!-- Project 1: eDNA Sampling Framework (ongoing) -->
           <div class="project-card featured" data-status="ongoing" data-domain="research,ml">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Data-driven Framework for optimizing eDNA sampling across spatial, depth, and temporal dimensions: A Belgian North Sea Case Study
+              </h3>
+            <div class="expandable" id="prj-more-1">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-ongoing">
                   <span class="pulse-dot"></span>
                   <span>Ongoing</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Data-driven Framework for optimizing eDNA sampling across spatial, depth, and temporal dimensions: A Belgian North Sea Case Study
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Currently working on research paper on optimizing eDNA sampling strategies. Reviewed 30+ papers, identified research gaps and scope of study, developed the basic research methodology, cleaned and transformed dataset. Currently developing two ML models.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Research Paper</span>
                 <span class="prj-tag">eDNA Genomics</span>
                 <span class="prj-tag">Machine Learning</span>
                 <span class="prj-tag">Belgian North Sea</span>
                 <span class="prj-tag">Python</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-1" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 2: Integrated Environmental Monitoring (ongoing) -->
           <div class="project-card featured" data-status="ongoing" data-domain="research,ml">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Integrated Environmental Monitoring and Predictive System for Ecosystem and Urban Sustainability
+              </h3>
+            <div class="expandable" id="prj-more-2">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-ongoing">
                   <span class="pulse-dot"></span>
                   <span>Ongoing</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Integrated Environmental Monitoring and Predictive System for Ecosystem and Urban Sustainability
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Currently working on a team project under the mentorship of Dr. Siba Panda. Created prototype1 of a scalable network of IoT-enabled sensors. Collected data and analysed through machine learning and CNN models. Currently working on incorporating GPS enabled alarm in fire stations.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Dr. Siba Panda Mentorship</span>
                 <span class="prj-tag">IoT Sensors</span>
                 <span class="prj-tag">CNN Models</span>
                 <span class="prj-tag">Machine Learning</span>
                 <span class="prj-tag">Urban Sustainability</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-2" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 3: AI vs Real image detection (Has GitHub Link) -->
           <div class="project-card" data-status="completed" data-domain="ml">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                AI vs Real image detection
+              </h3>
+            <div class="expandable" id="prj-more-3">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Deployed on Streamlit</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                AI vs Real image detection
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Created a project that can detect AI vs Real images using ML; also calculated the precision test and hypotheses testing on the model, along with its accuracy score, and deployed on Streamlit.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Machine Learning</span>
                 <span class="prj-tag">Precision Test</span>
                 <span class="prj-tag">Hypothesis Testing</span>
@@ -352,151 +357,169 @@
                   <span>↗</span>
                 </a>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-3" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 4: Cat disease detector -->
           <div class="project-card" data-status="completed" data-domain="ml,apps">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Cat disease detector
+              </h3>
+            <div class="expandable" id="prj-more-4">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Deployed Website</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Cat disease detector
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Created a project that detects type of cat injury/disease based on skin, eye, paw, claw images. Used a CNN model. A fully deployed website.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Machine Learning</span>
                 <span class="prj-tag">CNN Model</span>
                 <span class="prj-tag">Computer Vision</span>
                 <span class="prj-tag">Deployed Website</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-4" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 5: Spotify Wrapped Analysis dashboard -->
           <div class="project-card" data-status="completed" data-domain="apps">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Spotify Wrapped Analysis dashboard (Power BI)
+              </h3>
+            <div class="expandable" id="prj-more-5">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Interactive Dashboard</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Spotify Wrapped Analysis dashboard (Power BI)
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Created an Interactive Dashboard on Power BI. Showing analysis of music data. Includes hourly analysis, top songs, top artists, monthly analysis, tracks played most, tracks played at night and many more analysis.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Power BI</span>
                 <span class="prj-tag">DAX</span>
                 <span class="prj-tag">Music Data Analysis</span>
                 <span class="prj-tag">Visual Analytics</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-5" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 6: Bill split App -->
           <div class="project-card" data-status="completed" data-domain="apps">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Bill split App
+              </h3>
+            <div class="expandable" id="prj-more-6">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Completed</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Bill split App
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Built a bill split app on android studio, also incorporated database from DB Browser to track status of money owed by each person.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Android Studio</span>
                 <span class="prj-tag">DB Browser</span>
                 <span class="prj-tag">SQLite Database</span>
                 <span class="prj-tag">Mobile App</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-6" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 7: Dhruveeya Platform -->
           <div class="project-card" data-status="completed" data-domain="apps,research">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Dhruveeya Platform - Smart India Hackathon
+              </h3>
+            <div class="expandable" id="prj-more-7">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Prototype V1</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Dhruveeya Platform - Smart India Hackathon
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Ideated on a digital Platform for efficient remote management of Indian Antarctic Research Stations. Involved extensive research on Antarctic headquarter and base management, inventory requirements, Feasibility and viability, Potential impact etc. Developed first prototype.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">Smart India Hackathon</span>
                 <span class="prj-tag">Antarctic Stations</span>
                 <span class="prj-tag">Remote Management</span>
                 <span class="prj-tag">Digital Platform</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-7" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 8: Fool The LLM'26 -->
           <div class="project-card" data-status="completed" data-domain="ml,research">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Fool The LLM'26
+              </h3>
+            <div class="expandable" id="prj-more-8">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Hackathon Winner</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Fool The LLM'26
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 Participated in AI Jailbreaking hackathon. Won 3 levels of Jailbreaking using prompt injection, Edge cases and Encryption techniques.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">AI Jailbreaking</span>
                 <span class="prj-tag">Prompt Injection</span>
                 <span class="prj-tag">Edge Cases</span>
                 <span class="prj-tag">Encryption Techniques</span>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-8" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
           <!-- Project 9: Dice Wars Game (Has GitHub Link) -->
           <div class="project-card" data-status="completed" data-domain="apps,research">
-            <div>
-              <div class="card-top-meta">
+            <h3 class="project-title">
+                Dice Wars Game (Agent analysis and Game making)
+              </h3>
+            <div class="expandable" id="prj-more-9">
+              <div class="expandable-inner">
+                <div class="card-top-meta">
                 <span class="project-status-btn status-completed">
                   <span>Agent Systems</span>
                 </span>
               </div>
-              <h3 class="project-title">
-                Dice Wars Game (Agent analysis and Game making)
-              </h3>
-              <p class="project-desc">
+                <p class="project-desc">
                 A browser-based Dice Wars game developed for an AI and Agent Systems course. The game uses multiple AI agents to handle decision-making and gameplay behaviour.
               </p>
-            </div>
-            <div>
-              <div class="project-tag-list">
+                <div class="project-tag-list">
                 <span class="prj-tag">AI Agents</span>
                 <span class="prj-tag">Agent Systems</span>
                 <span class="prj-tag">Decision Modeling</span>
@@ -508,7 +531,11 @@
                   <span>↗</span>
                 </a>
               </div>
+              </div>
             </div>
+            <button class="btn-more" type="button" aria-expanded="false" aria-controls="prj-more-9" data-more="Read more" data-less="Show less">
+              <span class="btn-more-label">Read more</span><span class="btn-more-icon" aria-hidden="true">+</span>
+            </button>
           </div>
 
         </div>
@@ -977,6 +1004,6 @@
   <div id="action-toast" role="status" aria-live="polite"></div>
 
   <!-- JavaScript Engine -->
-  <script src="app.js?v=5"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>

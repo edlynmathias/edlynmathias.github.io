@@ -703,8 +703,88 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  align-items: start;
+}
+
+/* Collapsed cards: title + Read more, same height across a row */
+.projects-grid .project-card {
+  min-height: 215px;
+  justify-content: flex-start;
+}
+
+.projects-grid .project-card > .project-title {
+  margin-bottom: 8px;
+}
+
+.projects-grid .project-card .btn-more {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.projects-grid .expandable-inner .card-top-meta {
+  margin: 8px 0 12px 0;
+}
+
+/* --- Read more toggle --- */
+.expandable {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.expandable.open {
+  grid-template-rows: 1fr;
+}
+
+.expandable-inner {
+  overflow: hidden;
+  min-height: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.expandable.open .expandable-inner {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.btn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-neon-orchid);
+}
+
+.btn-more-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.btn-more[aria-expanded="true"] .btn-more-icon {
+  transform: rotate(45deg);
+}
+
+.btn-more:hover .btn-more-label {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .project-card {
