@@ -5,7 +5,7 @@
  * 2. Navigation smooth scroll & active scrollspy
  * 3. Skill pill copy interaction
  * 4. Experience Content & Design deliverables grid
- * 5. Projects filter
+ * 5. Read more toggles
  * 6. Course Certification modal previewer (view only)
  * 7. Extracurricular activity image lightbox
  * 8. Contact direct actions & message form
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSidebarScrollTracker();
   initSkillsFilter();
   initDesignGallery();
-  initProjectsFilter();
+  initReadMore();
   initCertificateModal();
   initExtracurricularLightbox();
   initContactActions();
@@ -218,33 +218,20 @@ function initDesignGallery() {
 }
 
 /* --------------------------------------------------------------------------
-   5. PROJECTS FILTER
+   5. READ MORE TOGGLES
+   Short copy by default; details open on tap.
    -------------------------------------------------------------------------- */
-function initProjectsFilter() {
-  const filterChips = document.querySelectorAll('.filter-chip');
-  const projectCards = document.querySelectorAll('.project-card');
+function initReadMore() {
+  document.querySelectorAll('.btn-more').forEach(btn => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    const label = btn.querySelector('.btn-more-label');
+    if (!panel) return;
 
-  filterChips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      filterChips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const filter = chip.dataset.filter;
-
-      let shown = 0;
-      projectCards.forEach(card => {
-        const match = filter === 'all'
-          || (filter === 'ongoing' && card.dataset.status === 'ongoing')
-          || (card.dataset.domain || '').split(',').includes(filter);
-        card.style.display = match ? 'flex' : 'none';
-        card.classList.remove('filter-in');
-        if (match && !prefersReducedMotion) {
-          // Restart the entrance animation with a small stagger
-          void card.offsetWidth;
-          card.style.animationDelay = `${shown * 50}ms`;
-          card.classList.add('filter-in');
-          shown++;
-        }
-      });
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      panel.classList.toggle('open', open);
+      if (label) label.textContent = open ? btn.dataset.less : btn.dataset.more;
     });
   });
 }
@@ -530,8 +517,10 @@ function initScrollReveal() {
     ['.profile-card-container', 'left', false],
     ['.about-bio-card', 'right', false],
     ['.skill-category-card', 'up', true],
-    ['.projects-controls', 'up', false],
+    ['.hero-highlights', 'up', false],
+    ['.projects-kicker', 'up', false],
     ['.project-card', 'up', true],
+    ['.compact-project', 'up', true],
     ['.experience-card', 'up', false],
     ['.cert-card', 'zoom', true],
     ['.extra-activity-card', 'up', false],
