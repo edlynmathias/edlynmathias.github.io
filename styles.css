@@ -705,12 +705,11 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
 }
 
-/* Collapsed cards: title + Read more, same height across a row */
+/* Cards in a row share a height so the Read more buttons line up */
 .projects-grid .project-card {
-  min-height: 215px;
   justify-content: flex-start;
 }
 
@@ -736,6 +735,10 @@ body {
 .projects-grid .project-tag-list,
 .projects-grid .project-card-footer {
   justify-content: center;
+}
+
+.projects-grid .project-card > .project-tag-list {
+  margin-bottom: 14px;
 }
 
 /* --- Read more toggle --- */
